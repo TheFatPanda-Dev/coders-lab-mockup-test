@@ -1,3 +1,128 @@
+:root {
+	--main-color: #000;
+	--secondary-color: #df590d;
+	--adjecent-color: #737373;
+}
+
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+	width: 1585px;
+	margin: 0 auto;
+}
+
+.header {
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.header > .logo {
+	color: var(--main-color);
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.header > .logo::before {
+	content: "";
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+	background-image: url("../images/logo.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 30px;
+}
+
+.header > .navbar {
+	display: flex;
+	gap: 70px;
+}
+
+.header > .navbar > a {
+	text-decoration: none;
+	color: var(--main-color);
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.hero {
+	height: calc(100vh - 40px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.intro-text {
+	margin-left: 150px;
+}
+
+.intro-text > h1 {
+	font-size: 64px;
+	color: var(--main-color);
+	font-weight: 600;
+	position: relative;
+}
+
+.intro-text > h1 > .highlight {
+	color: var(--adjecent-color);
+	font-weight: 700;
+}
+
+.intro-text > h1 > .highlight::after {
+	content: "";
+	position: absolute;
+	left: 113px;
+	bottom: -5px;
+	width: 170px;
+	height: 5px;
+	background-color: var(--main-color);
+	transform: rotate(-2deg);
+	border-radius: 5px;
+}
+
+.intro-text > p {
+	color: var(--main-color);
+	font-size: 30px;
+	font-weight: 300;
+	margin-top: 20px;
+	line-height: 40px;
+}
+
+.buttons {
+	display: flex;
+	gap: 35px;
+	margin-top: 100px;
+}
+
+.buttons > .btn {
+	font-size: 20px;
+	font-weight: 900;
+	width: 175px;
+	height: 60px;
+	border: none;
+	border-radius: 10px;
+	color: white;
+}
+
+.buttons > .btn-download {
+	background-color: var(--secondary-color);
+}
+
+.buttons > .btn-contact {
+	background: #434343;
+	background: linear-gradient(
+		90deg,
+		rgba(67, 67, 67, 1) 50%,
+		rgba(0, 0, 0, 1) 100%
+	);
 }
